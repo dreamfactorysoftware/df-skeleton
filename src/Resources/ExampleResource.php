@@ -6,8 +6,8 @@ use DreamFactory\Core\Enums\Verbs;
 use DreamFactory\Core\Exceptions\BadRequestException;
 use DreamFactory\Core\Exceptions\UnauthorizedException;
 use DreamFactory\Core\Exceptions\NotFoundException;
-use DreamFactory\Core\Git\Models\ExampleModel;
 use DreamFactory\Core\Resources\BaseRestResource;
+use DreamFactory\Core\Skeleton\Models\ExampleConfig;
 use DreamFactory\Core\Utility\JWTUtilities;
 use DreamFactory\Core\Utility\Session;
 
@@ -15,12 +15,15 @@ use DreamFactory\Core\Utility\Session;
 
 class ExampleResource extends BaseRestResource
 {
+    /**
+     * The url would be /api/v2/{service_name}/example
+    */
     const RESOURCE_NAME = 'example';
 
     /**
      * @var string DreamFactory\Core\Models\User Model Class name.
      */
-    protected static $model = ExampleModel::class;
+    protected static $model = ExampleConfig::class;
 
     /**
      * @param array $settings
@@ -50,10 +53,10 @@ class ExampleResource extends BaseRestResource
             throw new UnauthorizedException('There is no valid session for the current request.');
         }
 
-        $content = [];
-        dd($this->exampleModel->all());
+        $content = $this->exampleModel->all();
 
-        return $content;
+        return ["message" => "You sent a GET request to DF!",
+                "content" => $content];
     }
 
     /**

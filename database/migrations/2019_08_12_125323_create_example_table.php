@@ -33,11 +33,6 @@ class CreateExampleTable extends Migration
                     $t->string('label')->nullable();
                     $t->text('description')->nullable();
                     $t->timestamp('created_date')->nullable();
-                    $t->timestamp('last_modified_date')->useCurrent();
-                    $t->integer('created_by_id')->unsigned()->nullable();
-                    $t->foreign('created_by_id')->references('id')->on('user')->onDelete($onDelete);
-                    $t->integer('last_modified_by_id')->unsigned()->nullable();
-                    $t->foreign('last_modified_by_id')->references('id')->on('user')->onDelete($onDelete);
                 }
             );
         }

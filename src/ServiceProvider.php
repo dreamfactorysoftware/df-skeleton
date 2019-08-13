@@ -1,5 +1,5 @@
 <?php
-namespace DreamFactory\Core\Database;
+namespace DreamFactory\Core\Skeleton;
 
 use DreamFactory\Core\System\Resources\ExampleResource;
 use DreamFactory\Core\System\Components\SystemResourceManager;

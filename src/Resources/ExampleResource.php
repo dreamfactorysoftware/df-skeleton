@@ -1,6 +1,6 @@
 <?php
 
-namespace DreamFactory\Core\System\Resources;
+namespace DreamFactory\Core\Skeleton\Resources;
 
 use DreamFactory\Core\Enums\Verbs;
 use DreamFactory\Core\Exceptions\BadRequestException;

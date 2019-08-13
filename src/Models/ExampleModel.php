@@ -1,6 +1,6 @@
 <?php
 
-namespace DreamFactory\Core\Git\Models;
+namespace DreamFactory\Core\Skeleton\Models;
 
 use DreamFactory\Core\Models\BaseServiceConfigModel;
 

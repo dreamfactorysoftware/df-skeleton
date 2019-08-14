@@ -1,6 +1,7 @@
 <?php
 namespace DreamFactory\Core\Skeleton;
 
+use DreamFactory\Core\Compliance\Handlers\Events\EventHandler;
 use DreamFactory\Core\Skeleton\Http\Middleware\ExampleMiddleware;
 use DreamFactory\Core\Skeleton\Models\ExampleConfig;
 use DreamFactory\Core\Services\ServiceManager;
@@ -11,6 +12,7 @@ use DreamFactory\Core\Skeleton\Services\ExampleService;
 use Illuminate\Routing\Router;
 
 use Route;
+use Event;
 
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider

@@ -36,7 +36,9 @@ Just add the following to the composer.json file of your package:
 }
 ```
 
-## Foulders
+# This package has: 
+
+### Folders
 
 - `./database` 
 
@@ -89,7 +91,8 @@ Define your new Service here. It may also extend `DreamFactory\Core\Services\Bas
 
 PHPUnit tests go here.
 
-## This package has: 
+### Classes:
+
 1. Service that extends `DreamFactory\Core\Services\BaseRestService` (__see [src/Services](https://github.com/dreamfactorysoftware/df-skeleton/blob/add-examples/src/Services/ExampleService.php)__)
 2. Database table that describes your connector config (__see [database/migrations](https://github.com/dreamfactorysoftware/df-skeleton/blob/add-examples/database/migrations/2019_08_12_125323_create_example_table.php)__)
 3. Model that connects to the table and extends `DreamFactory\Core\Models\BaseServiceConfigModel` (__see [src/Models](https://github.com/dreamfactorysoftware/df-skeleton/blob/master/src/Models/ExampleModel.php)__).
@@ -103,6 +106,6 @@ For parent classes you can override methods to satisfy your needs.
 In your resource and service you can override handleGET, handlePOST methods from [df-core](https://github.com/dreamfactorysoftware/df-core/blob/06e01cd46ed106684041fb1fdf8ef35695a1b2cf/src/Components/RestHandler.php#L589) to determine responses (only if 
 [$autoDispatch = true;](https://github.com/dreamfactorysoftware/df-core/blob/06e01cd46ed106684041fb1fdf8ef35695a1b2cf/src/Components/RestHandler.php#L88)).
 
-[ServiceProvider](https://github.com/dreamfactorysoftware/df-skeleton/blob/master/src/ServiceProvider.php) that connect the package to the application.
+[ServiceProvider](https://github.com/dreamfactorysoftware/df-skeleton/blob/master/src/ServiceProvider.php) connects the package to the application.
 
 *Remember you are not limited and you can implement anything Laravel provide.*

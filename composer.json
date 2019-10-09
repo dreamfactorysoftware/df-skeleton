@@ -26,7 +26,7 @@
   "prefer-stable": true,
   "require":     {
     "dreamfactory/df-core":   "~0.15.2",
-    "dreamfactory/df-system": "~0.2.1"
+    "dreamfactory/df-system": "~0.2.2"
   },
   "require-dev": {
     "phpunit/phpunit": "@stable"

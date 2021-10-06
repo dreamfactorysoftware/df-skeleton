@@ -27,7 +27,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         // add routes
         /** @noinspection PhpUndefinedMethodInspection */
         if (!$this->app->routesAreCached()) {
-            include '/opt/dreamfactory/vendor/dreamfactory/df-skeleton/routes/routes.php';
+            include __DIR__ . '/../routes/routes.php';
         }
 
         $this->addMiddleware();

@@ -48,7 +48,6 @@ class ExampleConfig extends BaseServiceConfigModel
             case 'label':
                 $schema['label'] = 'Simple label';
                 $schema['type'] = 'text';
-                $schema['required'] = false;
                 $schema['description'] = 'This is just a simple label';
                 break;
 
@@ -61,6 +60,7 @@ class ExampleConfig extends BaseServiceConfigModel
             case 'is_example':
                 $schema['label'] = 'Is this an example?';
                 $schema['type'] = 'boolean';
+                $schema['required'] = false;
                 $schema['description'] =
                     'It must be an example';
                 break;

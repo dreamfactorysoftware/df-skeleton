@@ -22,20 +22,17 @@ class CreateExampleTable extends Migration
         $output = new ConsoleOutput();
         $output->writeln("Migration driver used: $driver");
 
-        // Database Table Extras
-        if (!Schema::hasTable('db_example')) {
-            Schema::create(
-                'db_example',
-                function (Blueprint $t) use ($onDelete) {
-                    $t->increments('id');
-                    $t->integer('service_id')->unsigned();
-                    $t->foreign('service_id')->references('id')->on('service')->onDelete('cascade');
-                    $t->string('label')->nullable();
-                    $t->text('description')->nullable();
-                    $t->timestamp('created_date')->nullable();
-                }
-            );
-        }
+        Schema::create(
+            'db_example',
+            function (Blueprint $t) use ($onDelete) {
+                $t->increments('id');
+                $t->integer('service_id')->unsigned();
+                $t->foreign('service_id')->references('id')->on('service')->onDelete('cascade');
+                $t->string('label')->nullable();
+                $t->text('description')->nullable();
+                $t->timestamp('created_date')->nullable();
+            }
+        );
     }
 
     /**

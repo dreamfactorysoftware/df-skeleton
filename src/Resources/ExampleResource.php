@@ -60,7 +60,7 @@ class ExampleResource extends BaseRestResource
     }
 
     /**
-     * Updates user profile.
+     * POST example
      *
      * @return array
      * @throws NotFoundException
@@ -68,11 +68,6 @@ class ExampleResource extends BaseRestResource
      */
     protected function handlePOST()
     {
-        $user = Session::user();
-
-        if (empty($user)) {
-            throw new NotFoundException('No user session found.');
-        }
         return ["You sent a POST request to DF!"];
     }
 }
